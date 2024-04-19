@@ -1,0 +1,475 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap");
+
+html, body {
+  font-family: "Titillium Web", sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-image: linear-gradient(rgba(250, 248, 248, 0.6), rgba(203, 201, 201, 0.6), rgba(250, 248, 248, 0.6));
+  color: black;
+  overflow-x: hidden;
+}
+/*for header*/
+.header{
+  display: flex;
+  flex-direction: row;
+}
+
+.header1 {
+  flex-grow: 1;
+  height:max-content;
+  object-fit:cover;
+  display:block;
+  margin:auto;
+}
+
+.header img {
+  max-width:30em;
+}
+@media screen  and (max-width: 1440px) {
+  .header1{
+    background-size: 60%;
+  }
+}
+
+.header2{
+  flex-grow:5;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0 10%;
+  text-align: center;
+  top:0;
+  position: sticky;
+}
+
+.navbar ul li {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+.navbar li a{
+  color: rgba(0, 0, 0, 0.511);
+  text-decoration: none;
+  transition: ease 0.5s;
+  
+}
+
+.active_nav {
+  color: rgba(173, 140, 39, 0.826);
+  text-shadow: #3b3333;
+}
+
+.navbar li :hover {
+  color: gold;
+  font-size: 1.5em;
+  transition: ease 0.25s;
+}
+/*making nav bar usable  on mobile & tablet devices */
+@media only screen and (min-width : 320px) and (max-width : 768px){
+  .header {
+    flex-direction: column;
+  }
+  
+  /* stacking the elements when there is not enough space for them to be displayed side by side */
+  .nav-bar {
+    flex-wrap: wrap;
+  }
+              
+  .nav-bar li {
+    display: block;
+    text-align:center;
+    margin: 5% auto;
+  }
+
+  .header2 {
+    margin: 0 -1em 0 -1em;
+  }
+
+  .header2 ul li{
+    font-size: .8em;;
+  }
+}
+
+/*for main body*/
+
+.btn {
+  padding: 12px 28px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 30px;
+  cursor: pointer;
+  color: black;
+  background-color: #fff;
+  border-radius: 20px;
+  border: 1px solid silver;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: black;
+  color: #fff;
+  border-color: #fff;
+  transition: 0.5s;
+}
+
+/*for cards to view car images*/
+
+@media screen and (max-width: 768px) {
+  .row{
+    display: flex;
+    flex-direction: column;
+  }
+  a{
+    font-size: .7em;
+  }
+}
+.desc{
+  padding:1em;
+  text-align: justify;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 4%;
+  height: 40vh;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.cards {
+  display: block;
+  max-width: 70%;
+  height: 50vh;
+  margin: auto;
+}
+
+.card {
+  width: 45%;
+  height:40%;
+  padding-bottom: 30%; /* Maintain image aspect ratio */
+  border-radius: 10px;
+  margin-top: 8em;
+  background-position: center;
+  background-size: cover;
+  border: 1px solid silver;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 3px 6px 10px rgba(0, 0,0,.2);
+  border: 2px solid gold;
+  width: 30vw;
+  transition: all .2s ease-in
+}
+
+.card .card-head {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border-radius: 6px;
+  padding: 6px;
+}
+
+.card .card-bottom {
+  position: absolute;
+  bottom: 26px;
+}
+
+.card-1 {
+  background-image: url(./images/pic-1.png);
+}
+
+.card-2 {
+  background-image: url(./images/pic-2.png);
+}
+
+.card-3 {
+  background-image: url(./images/pic-3.png);
+}
+
+.card-4 {
+  background-image: url(./images/pic-4.png);
+}
+
+.card-5 {
+  background-image: url(./images/pic-6.png);
+}
+
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .card {
+    height:100%;
+    width:50px;
+    align-self: center;
+    position: relative;
+    margin-left:-5em;
+    margin-right: -5em;
+  }
+  
+  .card .card-bottom{
+    display: none;
+  }
+  
+  .card-1 {
+    background-size: cover;
+    width:40%;
+  }
+
+  .card-2 {
+    background-size: cover;
+    width:40%;
+  }
+
+  .card-3 {
+    background-size: cover;
+    width:40%;
+  }
+
+  .card-4 {
+    background-size: cover;
+    width:40%;
+  }
+
+  .card-5 {
+    background-size: cover;
+    width:40%;
+  }
+}
+
+.reservation-bar {
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+  padding: 8px 0 8px 0;
+  margin: 0;
+  justify-content: space-evenly;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.reservation-bar form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.reservation-bar input[type="date"],
+.reservation-bar select {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.reservation-bar button {
+  flex-shrink: 0;
+  margin-left: 10px;
+}
+
+.reservation-bar input[type="date"],
+.reservation-bar select {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.reservation-bar button,.spbtn  {
+  padding: 8px 20px;
+  border: none;
+  background-color: goldenrod;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reservation-bar button:hover , .spbtn:hover{
+  background-color: black;
+  color: white
+}
+.reservation-bar form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#country {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+option {
+  padding: 10px;
+  font-size: 16px;
+}
+
+label {
+  color: black;
+}
+
+/*for serivces*/
+
+.ourservices{
+  width: 90%;
+  height: auto;
+  margin: 40px auto;
+  text-align: center;
+  box-shadow: 0px  5px 15px rgba(0,0,0,0.2);
+  border-radius: 10px;
+}
+
+.services{
+  width: 60%;
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  justify-content:space-evenly;
+  flex-wrap: wrap;
+  align-items:center;
+  margin: 0 auto;
+}
+
+.service{
+  flex-basis: auto;
+  width: 120px;
+  height: 120px;
+  width: fit-content;
+  align-self: center;
+  background-color: rgba(186, 94, 94, 0.7);
+  margin: 0 1em 1em 0;
+  text-align:center;
+  padding: 1em;
+  object-fit: contain;
+}
+.ourservices h5{
+  font-size: 1.5em;
+  color:goldenrod;
+  padding: 1em 0 0 0;
+}
+.service h5{
+  font-family: 'Segoe UI Emoji';
+  display:none;
+  width: 120px;
+  color: black;
+  margin-top:3em;
+}
+
+.service img{
+  height:100%;
+  margin-bottom: -2em;;
+}
+
+@media screen and (min-width: 767px) {
+  /* On screens that are 768px wide or larger */
+  .services h5{
+    display: inline;
+    font-size: 1em;;
+  }
+}
+/* serivces ends*/
+
+footer{
+  width: 100%;
+}
+
+.footer-col {
+  width: 25%;
+  float: left;
+  padding: 0;
+}
+
+.footer-col h4 {
+  color: silver;
+  margin-bottom: 20px;
+}
+
+.footer-col ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  line-height: 2em;
+}
+
+.footer-col ul li a {
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: goldenrod;
+}
+.social-links {
+  display: flex;
+  justify-content:  space-between;
+}
+.social-links a {
+  color: black;
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+form {
+  color: #fff;
+}
+
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.contact-form textarea {
+  height: 100px;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  border: none;
+  background-color: goldenrod;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #333;
+  transition: 0.3s ease;
+}
+
+.social_links a{
+  padding:.5em;
+}
+
+.social_links a img{
+  width:2em;
+}
+/*-- copyright declaration --*/
+.footer {
+  text-align: center;
+  padding: 30px;
+  color: black;
+}

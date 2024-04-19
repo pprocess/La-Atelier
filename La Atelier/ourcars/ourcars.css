@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap");
+
+html, body {
+  font-family: "Titillium Web", sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-image: linear-gradient(rgba(250, 248, 248, 0.6), rgba(203, 201, 201, 0.6), rgba(250, 248, 248, 0.6));
+  color: black;
+  overflow-x: hidden;
+}
+
+/* for header */
+.header {
+  display: flex;
+  flex-direction: row;
+}
+
+.header1 {
+  flex-grow: 1;
+  height: max-content;
+  object-fit: cover;
+  display: block;
+  margin: auto;
+}
+
+.header1 a img {
+  max-width: 30em;
+}
+/*making nav bar usable  on mobile & tablet devices */
+@media only screen and (min-width : 320px) and (max-width : 768px){
+  .header {
+    flex-direction: column;
+  }
+  
+  .ourcars{
+    font-size: .5em;
+  }
+
+  /* stacking the elements when there is not enough space for them to be displayed side by side */
+  .nav-bar {
+    flex-wrap: wrap;
+  }
+              
+  .nav-bar li {
+    display: block;
+    text-align:center;
+    margin: 5% auto;
+  }
+
+  .header2 {
+    margin: 0 -1em 0 -1em;
+  }
+
+  .header2 ul li{
+    font-size: .8em;;
+  }
+}
+
+/* for screens below 1400px width */
+@media screen and (max-width: 1440px) {
+  .header1 {
+    background-size: 60%;
+  }
+}
+
+.header2 {
+  flex-grow: 5;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0 10%;
+  text-align: center;
+  top: 0;
+  position: sticky;
+}
+
+.navbar ul li {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+.navbar li a {
+  color: rgba(0, 0, 0, 0.511);
+  text-decoration: none;
+  transition: ease 0.5s;
+}
+
+.active_nav {
+  color: rgba(173, 140, 39, 0.826);
+  text-shadow: #302a2a;
+  
+}
+
+.navbar li:hover {
+  color: gold;
+  font-size: 1.5em;
+  transition: ease 0.25s;
+}
+/* topics */
+
+.topic {
+  font-size: 2em;
+  margin: 0;
+  padding: 0;
+  
+}
+
+/* for insight tables */
+
+.insight{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
+  margin: 0 2em 0 2em;
+}
+
+.carinsight {
+  background-color: #fff; /* White background for tables */
+  border: 1px solid #fff; /* Light gray border */
+  border-radius: 5px;
+  margin: 10px;
+  padding: 15px;
+  width: 25%; /* Set a width for responsiveness */
+  text-align: center;
+}
+
+.carinsight h2 {
+  font-size: 1.2em;
+  color: black;
+  margin-bottom: 10px;
+}
+/*insight table for tablet & mobile both*/
+@media screen and (max-width:768px) {
+  .insight{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin:0;
+  }
+  .carinsight {
+    width: 80%;
+    margin: 0 0 1em 0;
+    align-self: center;
+  }
+
+}
+/* Table styles */
+table {
+  width: 100%; /* Make table fill the container */
+  border-collapse: collapse; /* Remove borders between cells */
+}
+
+th,
+td {
+  padding: 8px;
+  border: 1px solid #fff; /* Light gray border for cells */
+}
+
+th {
+  background-color: #f0f0f0; /* Light gray background for headers */
+  font-weight: bold;
+}
+
+/* Alternate row color for visual distinction */
+tr:nth-child(even) {
+  background-color: #f8f8f8; /* Lighter gray for even rows */
+}
+
+.carinsight.ins1 { /* Style for Hourly Contract Package */
+  background-color: #fcd49a; /* Light goldenrod background */
+}
+
+.carinsight.ins2 { /* Style for Daily Contract Package */
+  background-color: #d0e3f0; /* Light blue background */
+}
+
+.carinsight.ins3 { /* Style for Weekly Contract Package */
+  background-color: #e0f2da; /* Light green background */
+}
+
+/* for main body */
+
+.ourcars{
+  font-size: 3em;
+  margin-bottom: 5%;
+  text-align: center;
+  font-weight: bolder;
+  line-height: 1.2;
+  background: linear-gradient(45deg, goldenrod, black);background-clip:text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+.container {
+  margin: auto 2em auto 2em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.content {
+  align-items: center;
+  width: 350px;
+  text-align: justify;
+  justify-content: space-around;
+  margin: 1em;
+  padding: 2em;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.content:hover {
+  transform: scale(1.12);
+  border: solid goldenrod 2px;
+}
+
+.content:hover img {
+  border-radius: 10% 0 10% 0;
+}
+
+.content img {
+  width: 348px;
+  border: solid black;
+  border-width: 2px;
+  border-radius: 0 10% 0 10%;
+}
+
+/* for tablet */
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+  .container {
+    margin: 0 10em 0 0; 
+    padding: 0 0 10em 0;
+    flex-direction: column;
+  }
+
+  .content {
+    margin: 1em -5em 1em 1em;
+    width: fit-content;
+    text-align: justify;
+  }
+
+  .content p {
+    width:670px;
+  }
+
+  img {
+    margin:0 190px 0 190px;
+    align-self: center;
+
+  }
+}
+
+/* for mobile */
+@media only screen and (max-width: 426px)
+{
+  .container {
+    margin: 0 10em 0 0; 
+    padding: 0 0 10em 0;
+    flex-direction: column;
+  }
+
+  .content {
+    margin: 1em -5em 1em 1em;
+    width: fit-content;
+    text-align: justify;
+  }
+
+  .content p {
+    width:360px;
+  }
+
+  img {
+    margin:0 ;
+    align-self: center;
+
+  }
+}
+
+/*social links*/
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.social_links {
+  align-self: center;
+}
+
+.social_links a img{
+  height: 2em;
+}
+
+/*-- copyright declaration --*/
+
+.footer {
+  text-align: center;
+  padding: 30px;
+  color: black;
+}

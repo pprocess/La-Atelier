@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    font-size: 16px;
+    background-image: url(./images/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: var(--text-primary); 
+}
+
+h1 {
+    font-size: 100px;
+    text-align: center;
+    margin-top: 20vh;
+    transform: translateY(-50%); 
+}
+
+.flex_align_justify {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex_align {
+    display: flex;
+    align-items: center;
+}
+
+.wrapper {
+    padding: 20px;
+}
+
+.terms_service {
+    width: 90%;
+    max-width: 800px;
+    border-radius: 5px; 
+    box-shadow: 0px 0px 10px var(--text-secondary);
+    background-color: var(--background-primary); 
+}
+
+.terms_service .tc_item {
+    padding: 1em 5em 1em 5em;
+    background-color: rgba(239, 228, 70, 0.6);
+}
+
+.terms_service .tc_head .icon {
+    width: 60px; 
+    height: 60px; 
+    margin-right: 20px;
+    border-radius: 50%;
+    font-size: 24px; 
+}
+
+.terms_service .tc_head {
+    box-shadow: 0 2px 5px var(--text-secondary);
+}
+
+.terms_service .tc_foot {
+    justify-content: center; 
+    margin-top: 20px; 
+}
+
+.terms_service .tc_foot button {
+    width: 150px; 
+    border: none; 
+    padding: 12px 24px; 
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: var(--button-background); 
+    color: var(--button-text);
+}
+
+.terms_service .tc_foot button.decline_btn {
+    margin-right: 10px;
+}
+
+.terms_service .tc_body ol li {
+    color: var(--text-secondary);
+}
+
+.terms_service .tc_foot button:hover {
+    opacity: 0.8;
+}
+
+.accept_btn {
+    margin: 0 2em 0 2em;
+    background-color: #cdc8c8;
+    color: #000;
+}
+.accept_btn:hover{
+    background-color: #7165de;
+}
+
+.decline_btn {
+    margin: 0 2em 0 2em;
+    background-color: #cdc8c8;
+    color: #000;
+}
+.decline_btn:hover{
+    background-color: #7165de;
+}

@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap");
+
+html, body {
+  font-family: "Titillium Web", sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-image: linear-gradient(rgba(250, 248, 248, 0.6), rgba(203, 201, 201, 0.6), rgba(250, 248, 248, 0.6));
+  color: black;
+  overflow-x: hidden;
+}
+/*for header*/
+.header{
+  display: flex;
+  flex-direction: row;
+}
+
+.header1 {
+  flex-grow: 1;
+  height:max-content;
+  object-fit:cover;
+  display:block;
+  margin:auto;
+}
+
+.header1 a img {
+  max-width:30em;
+}
+
+/*making nav bar usable  on mobile & tablet devices */
+@media only screen and (max-width : 768px){
+  .header {
+    flex-direction: column;
+  }
+  
+  /* stacking the elements when there is not enough space for them to be displayed side by side */
+  .nav-bar {
+    flex-wrap: wrap;
+  }
+              
+  .nav-bar li {
+    display: block;
+    text-align:center;
+    margin: 5% auto;
+  }
+
+  .header2 {
+    margin: 0 -1em 0 -1em;
+  }
+
+  .header2 ul li{
+    font-size: .8em;
+  }
+}
+
+@media screen  and (max-width: 1440px) {
+  .header1{
+    background-size: 60%;
+  }
+}
+
+.header2{
+  flex-grow:5;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0 10%;
+  text-align: center;
+  top:0;
+  position: sticky;
+}
+
+.navbar ul li {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+.navbar li a{
+  color: rgba(0, 0, 0, 0.511);
+  text-decoration: none;
+  transition: ease 0.5s;
+  
+}
+
+.active_nav {
+  color: rgba(173, 140, 39, 0.826);
+}
+
+.navbar li :hover {
+  color: gold;
+  font-size: 1.5em;
+  transition: ease 0.25s;
+}
+/*for main body*/
+
+h1{
+  text-align: center;
+  background: linear-gradient(45deg, goldenrod, black);
+  background-clip:text;
+  position: relative;
+}
+
+.para{
+    text-align: center;
+}
+
+.members{
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container div {
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.team-member {
+    width: 350px;
+    margin: 50px;
+    text-align: center;
+    position: relative; /* Added */
+}
+
+.team-member img {
+    width: 81%;
+    height: 81%;
+    border-radius: 15%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.team-member:hover {
+    transform: scale(1.12);
+}
+
+.team-member .name {
+    margin-top: -50px;
+    z-index: 1;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    background-color: white;
+    position: relative; /* Added */
+    border: 2px solid black; /* Added */
+    padding: 5px; /* Added */
+}
+
+.social_links a img{
+  width: 30px;
+}
+
+/*-- copyright declaration --*/
+.footer {
+  text-align: center;
+  padding: 30px;
+  color: black;
+}

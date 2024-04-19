@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap') ;
+html, body {
+font-family : "Titillium Web", sans-serif;
+margin : 0;
+padding : 0;
+width : 100%;
+background-image : linear-gradient(rgb(250, 248, 248, 0.6), rgb(203, 201, 201, 0.6), rgb(250, 248, 248, 0.6));
+color : black;
+overflow-x : hidden;
+}
+.header {
+display : flex;
+flex-direction : row;
+}
+.header1 {
+flex-grow : 1;
+height : max-content;
+object-fit : cover;
+display : block;
+margin : auto;
+}
+.header1 a img {
+max-width : 30em;
+}
+@media screen and (max-width: 1440px) {
+.header1 {
+background-size : 60%;
+}
+}
+.header2 {
+flex-grow : 5;
+}
+.navbar {
+display : flex;
+justify-content : space-between;
+list-style : none;
+padding : 0 10%;
+text-align : center;
+top : 0;
+position : sticky;
+}
+.navbar ul li {
+width : 100%;
+display : flex;
+justify-content : space-around;
+padding : 0;
+list-style : none;
+text-decoration : none;
+}
+.navbar li a {
+color : rgb(0, 0, 0, 0.511);
+text-decoration : none;
+transition : 0.5s ease;
+}
+.active_nav {
+color : rgb(173, 140, 39, 0.826);
+}
+.navbar li :hover {
+color : gold;
+font-size : 1.5em;
+transition : 0.25s ease;
+}
+@media only screen and (device-width) and (device-width) {
+.header {
+flex-direction : column;
+}
+.nav-bar {
+flex-wrap : wrap;
+}
+.nav-bar li {
+display : block;
+text-align : center;
+margin : 5% auto;
+}
+.header2 {
+margin : 0 -1em 0 -1em;
+}
+.header2 ul li {
+font-size : 0.8em;
+}
+}
+.contact {
+position : relative;
+min-height : 100vh;
+display : flex;
+justify-content : center;
+align-items : center;
+flex-direction : column;
+}
+.contact .content {
+max-width : 800px;
+text-align : center;
+}
+.content h4 {
+color : goldenrod;
+font-weight : lighter;
+}
+.contact .content h1 {
+font-size : 5em;
+font-weight : 700;
+background : linear-gradient(45deg, goldenrod, black);
+background-clip : text;
+position : relative;
+}
+.contact .content p {
+font-weight : 400;
+color : black;
+}
+.container {
+width : 100%;
+display : flex;
+flex-direction : row;
+flex-wrap : wrap-reverse;
+justify-content : center;
+align-items : center;
+margin-top : 30px;
+}
+.container .contactInfo {
+width : 50%;
+}
+.container .contactInfo .box {
+padding : 0;
+display : flex;
+}
+b {
+margin : 0;
+padding : 0;
+}
+.container .contactInfo .box .icon {
+min-width : 60px;
+height : 60px;
+background : #ffffff;
+display : flex;
+align-items : center;
+justify-content : center;
+border-radius : 50%;
+font-size : 22px;
+color : goldenrod;
+font-weight : bold;
+}
+.container .contactInfo .box .text {
+display : flex;
+margin-left : 20px;
+font-size : 16px;
+color : black;
+flex-direction : column;
+font-weight : 500;
+}
+.container .contactInfo .box .text h3 {
+font-weight : 500;
+color : goldenrod;
+font-weight : bold;
+}
+iframe {
+width : 100%;
+height : 100%;
+border : none;
+justify-self : center;
+margin : 0;
+padding : 0;
+}
+.contactForm {
+margin-bottom : 5em;
+width : 35%;
+padding : 30px;
+background : rgb(255, 255, 255, 0.8);
+box-shadow : 0 20px 40px 5px rgb(0, 0, 0, 0.7);
+}
+.contactForm h2 {
+font-size : 30px;
+color : goldenrod;
+font-weight : 700;
+font-weight : bold;
+}
+.contactForm .inputBox {
+position : relative;
+width : 100%;
+margin-top : 10px;
+}
+.contactForm .inputBox input, .contactForm .inputBox textarea {
+width : 100%;
+padding : 5px 0;
+font-size : 16px;
+margin : 10px 0;
+border : none;
+border-bottom : 2px solid #333;
+outline : none;
+resize : none;
+background : rgb(255, 255, 255, 0.5);
+}
+.contactForm .inputBox span {
+position : absolute;
+left : 0;
+padding : 5px 0;
+font-size : 16px;
+margin : 10px 0;
+pointer-events : none;
+transition : 0.5s;
+color : #666;
+}
+.contactForm .inputBox input:focus ~ span, .contactForm .inputBox input:valid ~ span, .contactForm .inputBox textarea:focus ~ span, .contactForm .inputBox textarea:valid ~ span {
+color : goldenrod;
+font-weight : bold;
+font-size : 12px;
+transform : translateY(-20px);
+}
+.contactForm .inputBox input[type="submit"] {
+width : 100px;
+background : goldenrod;
+font-weight : bold;
+color : black;
+border : none;
+cursor : pointer;
+padding : 10px;
+font-size : 18px;
+font-weight : bold;
+}
+@media screen and (max-width: 768px) {
+.contact .content h1 {
+font-size : 30px;
+margin-bottom : 10px;
+letter-spacing : 1px;
+}
+.contact .contactForm h2 {
+font-size : 20px;
+margin-bottom : 10px;
+letter-spacing : 1px;
+}
+.container {
+padding : 0;
+margin : 0 -1em 0 -1em;
+}
+.container .contactInfo {
+width : 90%;
+}
+.contactForm {
+width : 90%;
+margin : auto 1em auto 1em;
+}
+.contactForm label {
+font-size : 10px;
+}
+.contactForm .inputBox input, .contactForm .inputBox textarea {
+height : 30px;
+}
+.contactForm .inputBox select {
+height : 35px;
+}
+.contactForm .inputBox select ~ span {
+top : -30px;
+}
+.contactForm .inputBox input[type="submit"] {
+display : block;
+width : 90%;
+margin : auto;
+margin-bottom : 10px;
+}
+}
+a {
+text-decoration : none;
+color : black;
+font-weight : bold;
+}
+.social_links {
+align-self : center;
+}
+.social_links a img {
+height : 2em;
+}
+.footer {
+text-align : center;
+padding : 30px;
+color : black;
+}
